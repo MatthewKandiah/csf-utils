@@ -8,7 +8,7 @@ if [ $# -eq 1 ] ; then
 		echo "Attempting to clone repo to current location"
 		module load tools/env/proxy
 		module load apps/git/2.19.0
-		git clone HTTPS
+		git clone $HTTPS
 	fi
 else
 	echo "This script requires exactly 1 argument: the HTTPS URL for your github repository. Please try again..."
