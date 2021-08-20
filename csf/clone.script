@@ -9,7 +9,7 @@ if [ $# -eq 2 ] ; then
 		echo "Attempting to clone repo to current location"
 		module load tools/env/proxy
 		module load apps/git/2.19.0
-		git pull $HTTPS
+		git clone $HTTPS $DIR
 	fi
 
 	echo "It's assumed that you're only cloning trusted files onto the CSF!"
