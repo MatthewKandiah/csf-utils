@@ -1,5 +1,16 @@
-#!/usr/bin/env bash
+#!/bin/bash --login
 
+
+alias start_containers="./start-containers.sh"
+
+To throw the alias inside the config file, you can do
+
+echo alias start_containers="./start-containers.sh" >> ~/.zshrc
+
+Share
+Improve this answer
+Follow
+answered Nov 20 '19 at 15:00 
 if [ $# -eq 1 ] ; then
 	HTTPS=$1
 	if [ pwd = *"scratch"* ]; then

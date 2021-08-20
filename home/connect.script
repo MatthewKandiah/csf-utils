@@ -3,6 +3,7 @@
 if [ $# -eq 1 ] ; then
 	USERNAME=$1
 	echo "Attempting to connect to Global Protect VPN, you may be asked for your username and password..."
+	echo "You may also need to use Duo for 2FA..."
 	globalprotect connect
 	echo "Attempting to connect to CSF3 via ssh, you will be asked for your password..."
 	ssh ${USERNAME}@csf3.itservices.manchester.ac.uk
