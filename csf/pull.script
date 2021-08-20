@@ -3,7 +3,7 @@
 if [ $# -eq 0 ] ; then
 	module load tools/env/proxy
 	module load apps/git/2.19.0
-	git clone
+	git pull
 else
 	echo "This script requires exactly 0 arguments. Please try again..."
 fi
