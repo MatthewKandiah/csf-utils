@@ -3,14 +3,10 @@
 if [ $# -eq 2 ] ; then
 	DIR=$1
 	HTTPS=$2
-	if [ pwd = *"scratch"* ]; then
-		echo "This script will not allow you to clone a repo into scratch/ or localscratch/. If you are sure you want to do this, you will have to do it manually"
-	else
-		echo "Attempting to clone repo to specified location"
-		module load tools/env/proxy
-		module load apps/git/2.19.0
-		git clone $HTTPS $DIR
-	fi
+	echo "Attempting to clone repo to specified directory"
+	module load tools/env/proxy
+	module load apps/git/2.19.0
+	git clone $HTTPS $DIR
 else
 	echo "This script requires exactly 2 arguments: the name of the directory to clone into, and the HTTPS URL for your github repository. Please try again..."
 fi
