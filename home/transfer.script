@@ -5,7 +5,7 @@ if [ $# -eq 2 ] ; then
 	FILE=$2
 	echo "Attempting to transfer $FILE to your home directory on the CSF"
 	echo "You will be asked for your password..."
-	scp $FILE username@csf3.itservices.manchester.ac.uk:~/
+	scp $FILE ${NAME}@csf3.itservices.manchester.ac.uk:~/
 else
 	echo "This script requires exactly 2 arguments: your username and the file you wish to transfer to the CSF. Please try again..."
 fi

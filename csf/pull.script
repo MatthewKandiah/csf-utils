@@ -4,9 +4,6 @@ if [ $# -eq 0 ] ; then
 	module load tools/env/proxy
 	module load apps/git/2.19.0
 	git pull
-	echo "pull.script completed!"
-	echo "To run your code, you may need to change the permissions on the files."
-	echo "This can be done with \"chmod 744 <filename>\" to give yourself full permissions."
 else
 	echo "This script requires exactly 0 arguments. Please try again..."
 fi

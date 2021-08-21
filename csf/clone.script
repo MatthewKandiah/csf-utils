@@ -10,9 +10,6 @@ if [ $# -eq 2 ] ; then
 		module load tools/env/proxy
 		module load apps/git/2.19.0
 		git clone $HTTPS $DIR
-		echo "clone.script completed!"
-		echo "To run your code, you may need to change the permissions on the files."
-		echo "This can be done with \"chmod 744 <filename>\" to give yourself full permissions."
 	fi
 else
 	echo "This script requires exactly 2 arguments: the name of the directory to clone into, and the HTTPS URL for your github repository. Please try again..."
