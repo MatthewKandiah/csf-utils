@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+if [ $# -eq 2 ] ; then
+	NAME=$1
+	FILE=$2
+	# Note: the file path should be given starting from the home directory
+	# i.e. if I want to download the file saved on the CSF as:
+	# ~/dir/fileiwanttodown.load
+	# Then I would use this script as
+	# ./download.script <username> dir/fileiwanttodown.load
+	echo "Attempting to download $FILE from the CSF to current location..."
+	echo "You will be asked for your password..."
+	scp ${NAME}@csf3.itservices.manchester.ac.uk:~/${FILE} .
+else
+	echo "This script requires exactly 2 arguments: your username and the file you wish to transfer to the CSF. Please try again..."
+fi
