@@ -1,13 +1,10 @@
 #!/bin/bash --login
 
 
-echo "Update permissions to make files in this directory with .script or .jobscript executable"
-for script in "*.script"
+echo "Update permissions in this directory and all subdirectories so .script file is executable"
+for script in $(find . "*.script")
 do
-    chmod 744 $script
-done
-for jobscript in "*.jobscript"
-do
-	chmod 744 $jobscript
+	echo "Updating permissions for $script"
+	chmod 744 $script
 done
 echo "permissions.script done!"
