@@ -1,0 +1,13 @@
+#!/bin/bash --login
+
+
+echo "Update permissions to make files in this directory with .script or .jobscript executable"
+for script in "*.script"
+do
+    chmod 744 $script
+done
+for jobscript in "*.jobscript"
+do
+	chmod 744 $jobscript
+done
+echo "permissions.script done!"
