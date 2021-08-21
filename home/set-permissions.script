@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+echo "updating all .script files to have read-write-execute permissions"
+echo "the following files have been updated"
+find . -name "*.script"
+chmod 744 `find . -name "*.script"`
