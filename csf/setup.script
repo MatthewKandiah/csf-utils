@@ -1,0 +1,24 @@
+#!/bin/bash --login
+
+# copy all files listed in .template file to scratch with given directory name
+# then make output, error, results folders in standard format ready to run jobscripts
+
+if [ $# -eq 2 ] ; then
+	TEMPLATE=$1
+	DIR=$2
+
+	DIRPATH=~/scratch/$DIR
+
+	mkdir $DIRPATH
+
+	cat $TEMPLATE | while read INPUT
+	do
+		cp $INPUT $DIRPATH/$INPUT
+	done
+	mkdir $DIRPATH/output
+	mkdir $DIRPATH/error
+	mkdir $DIRPATH/results
+	mkdir $DIRPATH/picklejar
+else
+	echo "This script requires exactly 2 arguments, the .template file listing needed files, and the name of the directory to make in your scratch area. Please try again..."
+fi
