@@ -15,7 +15,7 @@ if [ $# -eq 2 ] ; then
 
 	cat $TEMPLATE | while read INPUT
 	do
-		cp $INPUT $DIRPATH/$INPUT
+		cp $INPUT $DIRPATH/$(basename "$INPUT")
 	done
 	mkdir $DIRPATH/output
 	mkdir $DIRPATH/error
