@@ -1,0 +1,6 @@
+#!/bin/bash --login
+
+rm error/*
+rm output/*
+rm results/*
+rm picklejar/*
