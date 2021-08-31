@@ -12,5 +12,5 @@ if [ $# -eq 2 ] ; then
 	echo "You will be asked for your password..."
 	scp ${NAME}@csf3.itservices.manchester.ac.uk:~/${FILE} .
 else
-	echo "This script requires exactly 2 arguments: your username and the file you wish to transfer to the CSF. Please try again..."
+	echo "This script requires exactly 2 arguments: your username and the file you wish to download from the CSF. Please try again..."
 fi
